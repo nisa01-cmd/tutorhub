@@ -21,7 +21,7 @@ function MyClasses() {
     try {
 
       const res = await axios.get(
-        "http://127.0.0.1:8000/api/classes/my/",
+        `${process.env.REACT_APP_API_URL}/api/classes/my/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ function MyClasses() {
     try {
 
       await axios.delete(
-        `http://127.0.0.1:8000/api/classes/${id}/delete/`,
+        `${process.env.REACT_APP_API_URL}/api/classes/${id}/delete/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -16,7 +16,7 @@ function SearchClasses() {
       setLoading(true);
 
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/classes/?city=${city}&area=${area}`
+        `${process.env.REACT_APP_API_URL} /api/classes/?city=${city}&area=${area}`
       );
 
       setClasses(res.data);

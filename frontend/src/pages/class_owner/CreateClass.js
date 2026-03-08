@@ -33,7 +33,7 @@ function CreateClass() {
       setLoading(true);
 
       await axios.post(
-        "http://127.0.0.1:8000/api/classes/create/",
+        `${process.env.REACT_APP_API_URL}/api/classes/create/`,
         form,
         {
           headers: {

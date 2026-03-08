@@ -21,21 +21,21 @@ function ClassOwnerDashboard() {
     try {
 
       const classRes = await axios.get(
-        "http://127.0.0.1:8000/api/classes/my/",
+        `${process.env.REACT_APP_API_URL}/api/classes/my/`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
       );
 
       const courseRes = await axios.get(
-        "http://127.0.0.1:8000/api/courses/my/",
+        `${process.env.REACT_APP_API_URL}/api/courses/my/`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
       );
 
       const enrollRes = await axios.get(
-        "http://127.0.0.1:8000/api/class-enrollments/",
+        `${process.env.REACT_APP_API_URL}/api/class-enrollments/`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }

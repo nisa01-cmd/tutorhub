@@ -33,7 +33,7 @@ function CreateCourse() {
     try {
 
       await axios.post(
-        "http://127.0.0.1:8000/api/courses/create/",
+        `${process.env.REACT_APP_API_URL}/api/courses/create/`,
         {
           ...form,
           class_id: classId

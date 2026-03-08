@@ -18,7 +18,7 @@ function ClassDetails() {
     try {
 
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/courses/${id}/`
+        `${process.env.REACT_APP_API_URL}/api/courses/${id}/`
       );
 
       setCourses(res.data);
@@ -33,7 +33,7 @@ function ClassDetails() {
     try {
 
       await axios.post(
-        "http://127.0.0.1:8000/api/enroll/",
+        `${process.env.REACT_APP_API_URL}/api/enroll/`,
         { course_id: courseId },
         {
           headers: {

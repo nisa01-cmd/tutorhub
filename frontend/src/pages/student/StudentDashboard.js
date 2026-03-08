@@ -21,14 +21,14 @@ function StudentDashboard() {
     try {
 
       const enrollRes = await axios.get(
-        "http://127.0.0.1:8000/api/my-enrollments/",
+        `${process.env.REACT_APP_API_URL}/api/my-enrollments/`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
       );
 
       const classRes = await axios.get(
-        "http://127.0.0.1:8000/api/classes/"
+        `${process.env.REACT_APP_API_URL}/api/classes/`
       );
 
       setEnrollments(enrollRes.data);

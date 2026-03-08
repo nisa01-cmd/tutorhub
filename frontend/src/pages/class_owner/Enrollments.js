@@ -37,7 +37,7 @@ function Enrollments() {
 
     try {
       await axios.delete(
-        `http://127.0.0.1:8000/api/delete-enrollment/${id}/`,
+        `${process.env.REACT_APP_API_URL}/api/delete-enrollment/${id}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

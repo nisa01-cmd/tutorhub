@@ -20,7 +20,7 @@ function MyEnrollments() {
     try {
 
       const res = await axios.get(
-        "http://127.0.0.1:8000/api/my-enrollments/",
+        `${process.env.REACT_APP_API_URL}/api/my-enrollments/`,
         {
           headers: {
             Authorization: `Bearer ${token}`

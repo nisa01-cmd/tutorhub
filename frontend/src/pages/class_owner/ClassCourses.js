@@ -19,7 +19,7 @@ function ClassCourses() {
     try {
 
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/courses/${classId}/`,
+        `${process.env.REACT_APP_API_URL}/api/courses/${classId}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -43,7 +43,7 @@ function ClassCourses() {
     try {
 
       await axios.delete(
-        `http://127.0.0.1:8000/api/courses/${id}/delete/`,
+        `${process.env.REACT_APP_API_URL}/api/courses/${id}/delete/`,
         {
           headers: {
             Authorization: `Bearer ${token}`
